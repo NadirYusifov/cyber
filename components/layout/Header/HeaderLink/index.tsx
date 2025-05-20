@@ -1,20 +1,25 @@
 import React from 'react';
 import Link from 'next/link';
-import { HeaderIcon } from '@/assets/icon';
+import { HeaderIcon, SearchIcon } from '@/assets/icon';
 
 export default function HeaderLink() {
     return (
-        <nav className='text-[30px] lg:text-[16px] mt-24 lg:mt-0 flex items-center flex-col lg:flex-row gap-y-3 lg:gap-6'>
-            <div>
-                <input className='outline-none px-5 bg-gray-200 rounded-lg py-3' placeholder='Search' />
+        <nav className='mt-24 lg:mt-0 flex items-center flex-col lg:flex-row gap-y-3 lg:gap-6'>
+            <div className='relative'>
+                <div className='absolute translate-1/2'>
+                    <SearchIcon />
+                </div>
+                <input type='search' className='w-[360px] outline-none px-10 bg-cultured rounded-lg py-3' placeholder='Search' />
             </div>
-            <Link href={"#"}>Home</Link>
-            <Link href={"#"}>About</Link>
-            <Link href={"#"}>Contact Us</Link>
-            <Link href={"#"}>Blog</Link>
-            <div className='flex justify-center gap-4'>
-                {HeaderIcon.map((icon, index) => 
-                    <Link href={"#"}>{icon.svg}</Link>
+            <div className='text-[30px] text-american-silver lg:text-[16px] flex items-center flex-col lg:flex-row gap-y-3 lg:gap-13 transition-all'>
+                <Link className='hover:text-black' href={"#"}>Home</Link>
+                <Link className='hover:text-black' href={"#"}>About</Link>
+                <Link className='hover:text-black' href={"#"}>Contact Us</Link>
+                <Link className='hover:text-black' href={"#"}>Blog</Link>
+            </div>
+            <div className='flex justify-center items-center gap-x-6 mt-5 lg:mt-0'>
+                {HeaderIcon.map((icon, index) =>
+                    <Link key={index} href={icon.path}>{icon.svg}</Link>
                 )}
             </div>
         </nav>
