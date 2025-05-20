@@ -12,7 +12,7 @@ export default function Header() {
     return (
         <header className='header-nav relative'>
             <div className='container mx-auto px-4'>
-                <div className='bg-white py-8 flex justify-between items-center sticky top-0 z-10'>
+                <div className='bg-white py-8 justify-between lg:justify-around flex items-center sticky top-0 z-10'>
                     <div className='header-logo relative z-10'>
                         <div>
                             <Image src={Logo} width={80} height={80} quality={100} alt='header logo' />
@@ -26,7 +26,7 @@ export default function Header() {
                             <Hamburger size={25} toggled={isOpen} toggle={setOpen} />
                         </div>
                         {
-                            isOpen && <div className='bg-white h-screen top-0 left-0 right-0 text-center fixed'>
+                            isOpen && <div className={`bg-white h-screen top-0 left-0 right-0 text-center fixed  ${isOpen && 'transition-all'}`}>
                                 <HeaderLink />
                             </div>
                         }
