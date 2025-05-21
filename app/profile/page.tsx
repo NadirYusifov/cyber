@@ -1,4 +1,4 @@
-import ProfileSection from '@/pages/profilesection'
+import ProfileSection from '@/pages/profilepage'
 
 export default function Profile() {
     return (

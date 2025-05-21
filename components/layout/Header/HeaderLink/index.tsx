@@ -12,7 +12,7 @@ export default function HeaderLink() {
                 <input type='search' className='w-[360px] outline-none px-10 bg-cultured rounded-lg py-3' placeholder='Search' />
             </div>
             <div className='text-[30px] text-american-silver lg:text-[16px] flex items-center flex-col lg:flex-row gap-y-3 lg:gap-13 transition-all'>
-                <Link className='hover:text-black' href={"#"}>Home</Link>
+                <Link className='hover:text-black' href={"/"}>Home</Link>
                 <Link className='hover:text-black' href={"#"}>About</Link>
                 <Link className='hover:text-black' href={"#"}>Contact Us</Link>
                 <Link className='hover:text-black' href={"#"}>Blog</Link>

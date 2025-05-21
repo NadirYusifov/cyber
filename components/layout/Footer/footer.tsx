@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className='bg-black py-26 text-center lg:text-start'>
       <div className='container mx-auto px-4'>
         <div className='footer-area'>
-          <div className="footer-links grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="footer-links grid grid-cols-1 lg:grid-cols-3 lg:gap-10">
             <div className='footer-grid-one mb-8'>
               <div className='footer-logo flex justify-center lg:justify-start mb-4'>
                 <Image src={Logo} width={65.4} height={22.87} quality={100} alt='cyber logo' />
