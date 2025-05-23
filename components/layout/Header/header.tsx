@@ -1,10 +1,10 @@
 'use client'
 
 import Image from 'next/image';
-import { SetStateAction, useState } from 'react';
+import { useState } from 'react';
 import HeaderLink from './HeaderLink';
 import Hamburger from 'hamburger-react';
-import { useClickAway, useLockBodyScroll } from '@uidotdev/usehooks';
+import { useClickAway } from '@uidotdev/usehooks';
 import Logo from '../../../public/cyberlogoblack.png';
 import { AnimatePresence, motion } from 'motion/react';
 

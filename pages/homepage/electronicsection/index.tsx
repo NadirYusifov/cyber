@@ -15,9 +15,9 @@ export default function ElectronicSection() {
               <picture className='flex justify-center'>
                 <Image className='lg:w-[360px] lg:h-[343px] lg:object-cover lg:object-[70%_0%]' src={PlayStation} width={360} height={343} quality={100} alt='MacBook Air' />
               </picture>
-              <article className='lg:pl-14 lg:text-left text-center'>
-                <h3>Playstation 5</h3>
-                <p>Incredibly powerful CPUs, GPUs, and a SSD with integrated I/O will redefine your PlayStation experience.</p>
+              <article className='lg:pl-14 lg:text-left text-center space-y-4'>
+                <h3 className='text-[49px] font-medium leading-10'>Playstation 5</h3>
+                <p className='text-philippine-gray text-[14px] font-medium leading-6'>Incredibly powerful CPUs, GPUs, and a SSD with integrated I/O will redefine your PlayStation experience.</p>
               </article>
             </div>
           </div>
@@ -25,22 +25,22 @@ export default function ElectronicSection() {
             <div className='bg-bright-gray'>
               <div className='block lg:flex flex-row-reverse lg:flex-row justify-center lg:justify-between items-center'>
                 <picture className='flex justify-center'>
-                  <Image className='lg:w-[200px] lg:h-[272px] lg:object-cover lg:object-[100%_0]' src={AirPodsMax} width={104} height={272} quality={100} alt='MacBook Air' />
+                  <Image className='w-[192px] h-[200px] lg:w-[200px] lg:h-[272px] lg:object-cover lg:object-[100%_0]' src={AirPodsMax} width={104} height={272} quality={100} alt='MacBook Air' />
                 </picture>
                 <article className='lg:pl-14 lg:text-left text-center'>
-                  <h3>Apple AirPods Max</h3>
-                  <p>Computational audio. Listen, it's powerful</p>
+                  <h3 className='text-green-500'>Apple AirPods <span>Max</span></h3>
+                  <p>Computational audio. Listen, it`&apos`s powerful</p>
                 </article>
               </div>
             </div>
-            <div className='bg-jet'>
-              <div className='block lg:flex flex-row-reverse lg:flex-row justify-center lg:justify-between items-center'>
+            <div className='bg-jet flex items-center justify-center lg:justify-start'>
+              <div className='block lg:flex flex-row-reverse lg:flex-row'>
               <picture className='flex justify-center'>
-                <Image className='lg:w-[136px] lg:h-[190px] lg:object-cover lg:object-[10%_0]' src={VisionPro} width={136} height={190} quality={100} alt='MacBook Air' />
+                <Image className='lg:w-[136px] lg:h-[190px] lg:object-cover lg:object-[100%_0]' src={VisionPro} width={136} height={190} quality={100} alt='Apple Vision Pro' title='Apple Vision Pro' />
               </picture>
-              <article className='lg:pl-14 lg:text-left text-center'>
-                <h3 className='text-white text-[34px] lg:text-[29px] font-thin leading-14'>Apple Vision <span className='font-medium'>Pro</span></h3>
-                <p className='w-full lg:w-[360px] text-[14px] text-philippine-gray font-medium leading-6 py-4'>An immersive way to experience entertainment</p>
+              <article className='w-full lg:w-[160px] lg:pl-4 lg:text-left text-center'>
+                <h3 className='text-white text-[34px] lg:text-[29px] font-thin leading-10'>Apple Vision <span className='font-medium'>Pro</span></h3>
+                <p className='w-full text-[14px] text-philippine-gray font-medium leading-6 py-4'>An immersive way to experience entertainment</p>
               </article>
             </div>
               
