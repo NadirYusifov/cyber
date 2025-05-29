@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import AirPodsMax from '../../../public/airpodsmax.png';
 import VisionPro from '../../../public/visionpro.png';
+import AirPodsMax from '../../../public/airpodsmax.png';
 import PlayStation from '../../../public/playstation.png';
-// import IphoneImage from '../../../public/iphoneimage.png';
 import MacBookAir from '../../../public/macbookpro14(1).png';
+// import IphoneImage from '../../../public/iphoneimage.png';
 
 export default function ElectronicSection() {
   return (
