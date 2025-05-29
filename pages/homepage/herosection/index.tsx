@@ -18,9 +18,9 @@ export default function HeroSection() {
             </Button>
           </div>
         </div>
-        <div>
+        <picture className='flex flex-col items-center'>
           <Image src={IPhoneImage} width={406} height={632} quality={100} alt='Iphone Image'/>
-        </div>
+        </picture>
       </div>
     </section>
     // <>
