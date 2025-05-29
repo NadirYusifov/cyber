@@ -18,7 +18,7 @@ export default function Header() {
     return (
         <header className='header-nav bg-white sticky top-0 z-10'>
             <div className='container mx-auto px-4'>
-                <div className='py-8 justify-between lg:justify-between flex items-center sticky top-0 z-10'>
+                <div className='py-5 justify-between lg:justify-between flex items-center sticky top-0 z-10'>
                     <div className='header-logo relative z-10'>
                         <picture>
                             <Image src={Logo} width={80} height={80} quality={100} alt='header logo' />
