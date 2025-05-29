@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+body {
+  @apply box-border
+}
+
 @theme {
   --color-jet: #353535;
   --color-linear: #211c24;
