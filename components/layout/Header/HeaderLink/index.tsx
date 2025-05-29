@@ -17,7 +17,7 @@ export default function HeaderLink() {
                 <Link className='hover:text-black' href={"#"}>Contact Us</Link>
                 <Link className='hover:text-black' href={"#"}>Blog</Link>
             </div>
-            <div className='flex justify-center items-center gap-x-6 mt-5 lg:mt-0'>
+            <div className='flex justify-center items-center gap-x-6 ml-0 lg:ml-14 mt-5 lg:mt-0'>
                 {HeaderIcon.map((icon, index) =>
                     <Link key={index} href={icon.path}>{icon.svg}</Link>
                 )}
