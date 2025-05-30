@@ -3,6 +3,7 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { NextArrow, PrevArrow } from '@/components/common/arrow';
 
 export default function CategoriesSection() {
     const settings = {
@@ -10,18 +11,21 @@ export default function CategoriesSection() {
         infinite: true,
         speed: 500,
         slidesToShow: 6,
+        slidesToScroll: 6,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />
     }
 
     return (
-        <section className='categories-section'>
+        <section className='categories-section my-32'>
             <div className='container mx-auto px-4'>
                 <div className='categories-area'>
-                    <article className='categories-header'>
+                    <article className='categories-header inline-block mb-8'>
                         <h3 className='text-2xl tracking-[1%] leading-8 font-medium'>Browse By Category</h3>
                     </article>
                     <div className='categories-slider text-center'>
                         <Slider {...settings}>
-                            <div className='bg-bright-gray'>
+                            <div className='bg-bright-gray w-40 h-[7.5rem] !flex flex-col justify-center'>
                                 <span>📱</span>
                                 <article>Phones</article>
                             </div>
