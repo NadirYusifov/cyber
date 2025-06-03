@@ -13,7 +13,17 @@ export default function CategoriesSection() {
         slidesToShow: 6,
         slidesToScroll: 6,
         nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />
+        prevArrow: <PrevArrow />,
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToScroll: 1,
+                    slidesToShow: 2,
+                    slidesPerRow: 3
+                }
+            }
+        ]
     }
 
     return (
