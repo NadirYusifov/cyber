@@ -36,7 +36,7 @@ export default function ElectronicSection() {
                 </picture>
                 <article className='lg:pl-14 lg:text-left text-center space-y-2 px-4'>
                   <h3 className='w-full lg:w-40 text-[34px] lg:text-[29px] font-light leading-10'>Apple AirPods <span className='font-medium'>Max</span></h3>
-                  <p className='w-full text-[1rem] lg:text-[14px] text-philippine-gray font-medium leading-6'>Computational audio. Listen, it`&apos;`s powerful</p>
+                  <p className='w-full text-[1rem] lg:text-[14px] text-philippine-gray font-medium leading-6'>Computational audio. Listen, it&apos;s powerful</p>
                 </article>
               </div>
             </div>
