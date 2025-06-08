@@ -7,6 +7,14 @@ body {
   @apply box-border
 }
 
+/* .slick-arrow .slick-prev {
+  @apply absolute top-auto left-0 right-0
+} */
+
+.slick-prev:before {
+  @apply hidden;
+} 
+
 @theme {
   --color-jet: #353535;
   --color-linear: #211c24;
