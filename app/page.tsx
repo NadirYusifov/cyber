@@ -1,6 +1,6 @@
 import BannersSecondSection from "@/pages/bannerssecondsection";
 import BannersSection from "@/pages/bannerssection";
-import DiscountsProducts from "@/pages/discountsproducts";
+import DiscountsProductsSection from "@/pages/discountsproducts";
 import CategoriesSection from "@/pages/homepage/categoriessction";
 import ElectronicSection from "@/pages/homepage/electronicsection";
 import HeroSection from "@/pages/homepage/herosection";
@@ -14,7 +14,7 @@ export default function Home() {
       <CategoriesSection />
       <ProductsSection />
       <BannersSection />
-      <DiscountsProducts />
+      <DiscountsProductsSection />
       <BannersSecondSection />
     </main>
   );
