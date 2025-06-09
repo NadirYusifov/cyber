@@ -4,7 +4,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { NextArrow, PrevArrow } from '@/components/common/arrow';
-import { Rows } from 'lucide-react';
 
 export default function CategoriesSection() {
 
