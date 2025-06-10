@@ -56,8 +56,8 @@ export default function CategoriesSection() {
         speed: 500,
         slidesToShow: 6,
         slidesToScroll: 6,
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />,
+        // nextArrow: <NextArrow />,
+        // prevArrow: <PrevArrow />,
         responsive: [
             {
                 breakpoint: 600,
