@@ -4,9 +4,11 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { NextArrow, PrevArrow } from '@/components/common/arrow';
+import { useRef } from 'react';
 
 export default function CategoriesSection() {
-
+    const sliderRef = useRef<Slider | null>(null);
+    
     const slideritem = [
         {
             icon: '📱',
@@ -56,8 +58,6 @@ export default function CategoriesSection() {
         speed: 500,
         slidesToShow: 6,
         slidesToScroll: 6,
-        // nextArrow: <NextArrow />,
-        // prevArrow: <PrevArrow />,
         responsive: [
             {
                 breakpoint: 600,
@@ -86,11 +86,22 @@ export default function CategoriesSection() {
         <section className='categories-section my-32'>
             <div className='container mx-auto px-4'>
                 <div className='categories-area'>
-                    <article className='categories-header mb-8 inline-block relative'>
-                        <h3 className='text-2xl tracking-[1%] leading-8 font-medium inline-block'>Browse By Category</h3>
-                    </article>
+                    <div className='flex justify-between items-center mb-8'>
+                        <article className='categories-header flex items-center'>
+                            <h3 className='text-2xl tracking-[1%] leading-8 font-medium inline-block'>Browse By Category</h3>
+                        </article>
+                        <div className='flex gap-x-5 items-center'>
+                        <div onClick={() => sliderRef.current?.slickPrev()}>
+                            <PrevArrow />
+                        </div>
+                        <div onClick={() => sliderRef.current?.slickNext()}>
+                            <NextArrow />
+                        </div>
+                        </div>
+                    </div>
+                
                     <div className='categories-slider text-center'>
-                        <Slider {...settings}>
+                        <Slider ref={sliderRef} {...settings}>
                             {slideritem.map((item, index) => (
                                 <div className='flex flex-row justify-center items-center px-2 py-3'>
                                     <div className='bg-bright-gray rounded-[0.938rem] w-full  h-[7.5rem] !flex flex-col justify-center' key={index}>
