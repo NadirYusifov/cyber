@@ -3,13 +3,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+::selection {
+  @apply bg-jet text-white
+}
+
 body {
   @apply box-border
 }
-
-/* .slick-arrow .slick-prev {
-  @apply absolute top-auto left-0 right-0
-} */
 
 .slick-prev:before {
   @apply hidden;
@@ -23,6 +23,7 @@ body {
   --color-bright-gray: #ededed;
   --color-ghost-white: #f9f9f9;
   --color-white-smoke: #f6f6f6;
+  --color-sonic-silver: #787878;
   --color-dark-charcoal: #2c2c2c;
   --color-philippine-gray: #909090;
   --color-american-silver: #cfcfcf;
