@@ -1,12 +1,21 @@
-import { Router } from 'express';
-import { productGet } from '../controllers/productGet.js';
-import { productPost } from '../controllers/productPost.js';
-import { productGetId } from '../controllers/productGetId.js';
+import { Router } from "express";
+import { productGet } from "../controllers/productController/productGet.js";
+import { productPost } from "../controllers/productController/productPost.js";
+import { productGetId } from "../controllers/productController/productGetId.js";
+import { productPatch } from "../controllers/productController/productPatch.js";
+import { productDelete } from "../controllers/productController/productDelete.js";
 
 export const cyberProductsRouter = Router();
 
-cyberProductsRouter.get('/', productGet);
-cyberProductsRouter.get('/:id', productGetId);
+// GET
+cyberProductsRouter.get("/", productGet);
+cyberProductsRouter.get("/:id", productGetId);
 
 // POST
-cyberProductsRouter.post('/', productPost);
+cyberProductsRouter.post("/", productPost);
+
+// PATCH
+cyberProductsRouter.patch("/:id", productPatch);
+
+// DELETE
+cyberProductsRouter.delete("/:id", productDelete);
