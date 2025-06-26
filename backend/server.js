@@ -2,7 +2,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
-import { cyberProductsRouter } from "./routes/cyberRoutes.js";
+import { cyberProductsRouter } from "./routes/cyberproductRoutes.js";
 
 const app = express();
 app.use(express.json());
