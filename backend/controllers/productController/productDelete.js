@@ -1,9 +1,9 @@
-import { cyberProductModels } from "../../models/cyberProductModels.js";
+import { cyberProductModels } from "../../models/cyberproductModels.js";
 
 export const productDelete = async (req, res) => {
   const { id } = req.params;
   await cyberProductModels.findOneAndDelete(req.params.id).then(() => {
-    res.status(200).send({
+    res.status(200).json({
       status: 200,
       message: "Delete sucessfully",
     });
