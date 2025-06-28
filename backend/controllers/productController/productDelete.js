@@ -1,4 +1,4 @@
-import { cyberProductModels } from "../../models/cyberproductModels.js";
+import { cyberproductsModels } from "../../models/cyberModels.js";
 
 export const productDelete = async (req, res) => {
   const { id } = req.params;
