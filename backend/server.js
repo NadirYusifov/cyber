@@ -2,7 +2,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import mongoose from "mongoose";
-import { cyberProductsRouter } from "./routes/cyberproductRoutes.js";
+import { cyberauthRoutes } from "./routes/cyberauthRoutes.js";
+import { cyberproductsRoutes } from "./routes/cyberproductsRoutes.js";
 
 const app = express();
 app.use(express.json());
@@ -11,7 +12,8 @@ dotenv.config();
 
 const PORT = 7575;
 
-app.use("/products", cyberProductsRouter);
+app.use("/products", cyberproductsRoutes);
+app.use("/admin", cyberauthRoutes);
 
 const mongoconnect = async () => {
   try {
