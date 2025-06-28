@@ -1,10 +1,10 @@
-import { cyberProductModels } from "../../models/cyberproductModels.js";
+import { cyberproductsModels } from "../../models/cyberModels.js";
 
 export const productPatch = (req, res) => {
   const id = req.params.id;
   if (id) {
     try {
-      cyberProductModels.findByIdAndUpdate(id, req.body).then(() => {
+      cyberproductsModels.findByIdAndUpdate(id, req.body).then(() => {
         res.status(200).json({
           status: 200,
           message: "Update sucessfully",
