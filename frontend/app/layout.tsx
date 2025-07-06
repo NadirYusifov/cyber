@@ -25,9 +25,7 @@ export default function RootLayout({
       <body
         className={`${interSans.className} antialiased`}
       >
-        <Layout>
           {children}
-        </Layout>
       </body>
     </html>
   );
