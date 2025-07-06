@@ -12,8 +12,8 @@ dotenv.config();
 
 const PORT = 7575;
 
+app.use("/admin/login", cyberauthRoutes);
 app.use("/products", cyberproductsRoutes);
-app.use("/admin", cyberauthRoutes);
 
 const mongoconnect = async () => {
   try {
