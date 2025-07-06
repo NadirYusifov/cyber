@@ -1,10 +1,10 @@
 'use client'
 
+import { useRef } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { NextArrow, PrevArrow } from '@/components/common/arrow';
-import { useRef } from 'react';
 
 export default function CategoriesSection() {
     const sliderRef = useRef<Slider | null>(null);
