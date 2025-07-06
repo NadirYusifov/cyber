@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import IPhoneImage from '../../../public/iphoneimage.png';
+import IPhoneImage from '@/public/iphoneimage.png';
 
 export default function HeroSection() {
   return (
