@@ -11,8 +11,8 @@ export const cyberproductsSchema = new mongoose.Schema(
 
 export const cyberauthSchema = new mongoose.Schema(
   {
-    name: { type: String, require: true },
-    password: { type: Number, require: true },
+    username: { type: String, require: true },
+    password: { type: String, require: true }
   },
   { versionKey: false },
 );
