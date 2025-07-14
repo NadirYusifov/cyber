@@ -3,11 +3,12 @@ import { cyberauthModels } from "../../models/cyberModels.js"
 
 export const adminloginPost = async (req, res) => {
     const { username, password } = req.body;
+    console.log(req.body);
+    
 
     try {
         // Admin data username findOne
-        const isUsername = await cyberauthModels.findOne({ username: "admin" });
-        const isPassword = await cyberauthModels.findOne({ password: "admin123" })
+        const isUsername = await cyberauthModels.findOne({ username });
         if (isUsername) {
             res.status(400).json({
                 status: 400,
@@ -17,14 +18,14 @@ export const adminloginPost = async (req, res) => {
             return;
         };
 
-        if (isPassword) {
-            res.status(400).json({
-                status: 400,
-                message: "Password already exists",
-                success: false
-            })
-            return;
-        };
+        // if (isPassword) {
+        //     res.status(400).json({
+        //         status: 400,
+        //         message: "Password already exists",
+        //         success: false
+        //     })
+        //     return;
+        // };
 
         // Admin data username create
         const hashedPassword = await bcrypt.hash(password, 10);
