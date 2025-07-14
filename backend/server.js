@@ -6,12 +6,17 @@ import { cyberauthRoutes } from "./routes/cyberauthRoutes.js";
 import { cyberproductsRoutes } from "./routes/cyberproductsRoutes.js";
 
 const app = express();
-app.use(express.json());
-app.use(cors());
 dotenv.config();
+
+
 
 const PORT = 7575;
 
+app.use(express.json());
+app.use(cors({
+  origin: "http://localhost:3000",
+  credentials: true
+}));
 app.use("/admin/login", cyberauthRoutes);
 app.use("/products", cyberproductsRoutes);
 
