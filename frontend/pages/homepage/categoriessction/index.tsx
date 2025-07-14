@@ -88,7 +88,7 @@ export default function CategoriesSection() {
                 <div className='categories-area'>
                     <div className='flex justify-between items-center mb-8'>
                         <article className='categories-header flex items-center'>
-                            <h3 className='text-2xl tracking-[1%] leading-8 font-medium inline-block'>Browse By Category</h3>
+                            <h3 className='text-2xl tracking-[1%] leading-8 font-medium'>Browse By Category</h3>
                         </article>
                         <div className='flex gap-x-5 items-center'>
                         <div onClick={() => sliderRef.current?.slickPrev()}>
@@ -104,10 +104,10 @@ export default function CategoriesSection() {
                         <Slider ref={sliderRef} {...settings}>
                             {slideritem.map((item, index) => (
                                 <div className='flex flex-row justify-center items-center px-2 py-3'>
-                                    <div className='bg-bright-gray rounded-[0.938rem] w-full  h-[7.5rem] !flex flex-col justify-center' key={index}>
+                                    <article className='bg-bright-gray rounded-[0.938rem] w-full h-[7.5rem] !flex flex-col justify-center' key={index}>
                                         <span>{item.icon}</span>
                                         <article className='text-[1rem] font-medium leading-6'>{item.title}</article>
-                                    </div>
+                                    </article>
                                 </div>
                             ))}
                         </Slider>
