@@ -1,10 +1,23 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:is(.dark *)); */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 ::selection {
   @apply bg-jet text-white
+}
+
+.admin-layout {
+  @apply bg-white text-black dark:bg-dark-charcoal dark:text-white
+}
+
+:root[data-theme="dark"] {
+  background-color: var(--color-dark-charcoal);
+}
+
+:root[data-theme="light"] {
+  background-color: var(--color-white-smoke);
 }
 
 body {
