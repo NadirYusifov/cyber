@@ -1,4 +1,4 @@
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight, Pencil, SunMoon } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 
@@ -15,10 +15,12 @@ export default function SettingsPage() {
             <span><ChevronRight /></span>
           </Link>
           <Link className="text-[1.3rem] flex items-center justify-between w-full hover:bg-dark-charcoal hover:text-white px-2 py-1.5 rounded-md transition-all" href={"/admin/home/settings/profileedit"}>
+            <Pencil />
             Profile Edit
             <span><ChevronRight /></span>
           </Link>
           <Link className="text-[1.3rem] flex items-center justify-between w-full hover:bg-dark-charcoal hover:text-white px-2 py-1.5 rounded-md transition-all" href={"/admin/home/settings/theme"}>
+            <span><SunMoon /></span>
             Theme
             <span><ChevronRight /></span>
           </Link>
