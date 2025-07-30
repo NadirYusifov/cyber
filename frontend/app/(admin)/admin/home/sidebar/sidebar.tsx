@@ -10,7 +10,7 @@ export default function Sidebar() {
   const [menu, setMenu] = useState(false)
 
   return (
-    <aside className="bg-dark-charcoal text-white w-xs size-full h-screen">
+    <aside className="w-xs size-full h-screen border-r-2 border-zinc-700">
       <div className="container mx-auto px-4 mt-10">
         <picture className="flex items-center justify-center">
           <Image src={cyberlogo} width={100} height={100} quality={100} alt="cyber logo" />
