@@ -1,38 +1,69 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* @custom-variant dark (&:is(.dark *)); */
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant dark (&:is(.dark *));
+/* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
 
 ::selection {
   @apply bg-jet text-white
 }
 
-.admin-layout {
-  @apply bg-white text-black dark:bg-dark-charcoal dark:text-white
+@layer base {
+  .dark {
+    background-color: var(--color-accent);
+  }
+
+  :root {
+    background-color: var(--color-white-smoke);
+  }
 }
 
-:root[data-theme="dark"] {
-  background-color: var(--color-dark-charcoal);
-}
-
-:root[data-theme="light"] {
-  background-color: var(--color-white-smoke);
-}
-
+html,
 body {
   @apply box-border
 }
 
 .slick-prev:before {
   @apply hidden;
-} 
+}
 
 .slick-next:before {
   @apply hidden;
 }
 
 @theme {
+  --background: oklch(.141 .005 285.823);
+  --foreground: oklch(.985 0 0);
+  --card: oklch(.21 .006 285.885);
+  --card-foreground: oklch(.985 0 0);
+  --popover: oklch(.21 .006 285.885);
+  --popover-foreground: oklch(.985 0 0);
+  --primary: oklch(.92 .004 286.32);
+  --primary-foreground: oklch(.21 .006 285.885);
+  --secondary: oklch(.274 .006 286.033);
+  --secondary-foreground: oklch(.985 0 0);
+  --muted: oklch(.274 .006 286.033);
+  --muted-foreground: oklch(.705 .015 286.067);
+  --accent: oklch(.274 .006 286.033);
+  --accent-foreground: oklch(.985 0 0);
+  --destructive: oklch(.704 .191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(.552 .016 285.938);
+  --chart-1: oklch(.488 .243 264.376);
+  --chart-2: oklch(.696 .17 162.48);
+  --chart-3: oklch(.769 .188 70.08);
+  --chart-4: oklch(.627 .265 303.9);
+  --chart-5: oklch(.645 .246 16.439);
+  --sidebar: oklch(.21 .006 285.885);
+  --sidebar-foreground: oklch(.985 0 0);
+  --sidebar-primary: oklch(.488 .243 264.376);
+  --sidebar-primary-foreground: oklch(.985 0 0);
+  --sidebar-accent: oklch(.274 .006 286.033);
+  --sidebar-accent-foreground: oklch(.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(.552 .016 285.938);
+  --color-background: #0f172b;
   --color-jet: #353535;
   --color-linear: #211c24;
   --color-cultured: #f5f5f5;
@@ -157,6 +188,7 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
