@@ -1,13 +1,15 @@
-"use client"
+// "use client"
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+// import { useState } from 'react';
 import cyberlogo from "@/public/cyberlogo.png";
 import { CirclePlus, House, Settings } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function Sidebar() {
-  const [menu, setMenu] = useState(false)
+  // const [menu, setMenu] = useState(false);
+  const t = useTranslations("Sidebar")
 
   return (
     <aside className="w-xs size-full h-screen border-r-2 border-zinc-700">
@@ -18,14 +20,15 @@ export default function Sidebar() {
         <article className="text-[1.3rem] flex flex-col space-y-3 pt-10">
           <Link className="flex items-center" href={"/admin/home"}>
             <span className="pr-2"><House /></span>
-            Home
+            {t("home")}
           </Link>
           <Link className="flex items-center" href={"/admin/home/addproduct"}>
             <span className="pr-2"><CirclePlus /></span>
-            Add Product</Link>
+            {t("addproducts")}
+          </Link>
           <Link className="flex items-center" href={"/admin/home/settings"}>
             <span className="pr-2"><Settings /></span>
-            Settings
+            {t("settings")}
           </Link>
         </article>
       </div>
