@@ -1,0 +1,15 @@
+{
+    "Sidebar": {
+        "home": "Əsas səhifə",
+        "addproducts": "Məhsullar əlavə et",
+        "settings": "Ayarlar"
+    },
+    "Themes": {
+        "title": "Temalar",
+        "themesselect": "Temalar seçin:",
+        "system": "Sistem",
+        "light": "Açıq",
+        "dark": "Tünd",
+        "langselect": "Dil seçin:"
+    }
+}

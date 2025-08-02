@@ -1,0 +1,15 @@
+{
+    "Sidebar": {
+        "home": "Home",
+        "addproducts": "Add products",
+        "settings": "Settings"
+    },
+    "Themes": {
+        "title": "Theme",
+        "themesselect": "Themes select:",
+        "system": "System",
+        "light": "Light",
+        "dark": "Dark",
+        "langselect": "Language select:"
+    }
+}
