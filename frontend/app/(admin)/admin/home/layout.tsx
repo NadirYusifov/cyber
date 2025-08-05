@@ -1,12 +1,11 @@
-// "use client"
-
-// import { useEffect, useState } from "react";
 import "@/app/globals.css"
 import Sidebar from "./sidebar/sidebar";
-import ThemeProviders from "@/components/providers/themeprovider";
 import { Inter } from "next/font/google";
-import { getLocale, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
+import ThemeProviders from "@/components/providers/themeprovider";
+
+// import {onCLS} from "web-vitals"
 
 const interSans = Inter({
   weight: "variable",
@@ -19,26 +18,22 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode,
 }>) {
-
+  
+  // onCLS(console.log)
   const locale = await getLocale();
   const messages = await getMessages()
-  // const [isClient, setIsClient] = useState(false);
-
-  // useEffect(() => {
-  //   setIsClient(true);
-  // })
 
   return (
     <html lang={locale} suppressHydrationWarning={true}>
-      <body className={`${interSans.className} antialiased`}>
+      <body className={`${interSans.className} antialiased`} suppressHydrationWarning={true}>
+        <ThemeProviders enableSystem={true} attribute="class" defaultTheme="system">
           <main className="admin-layout-main flex">
             <Sidebar />
-            <ThemeProviders enableSystem attribute="class" defaultTheme="system">
-              <NextIntlClientProvider messages={messages}>
-                {children}
-              </NextIntlClientProvider>
-            </ThemeProviders>
+            <NextIntlClientProvider messages={messages}>
+              {children}
+            </NextIntlClientProvider>
           </main>
+        </ThemeProviders>
       </body>
     </html>
   );
