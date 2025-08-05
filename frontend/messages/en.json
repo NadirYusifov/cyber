@@ -4,9 +4,15 @@
         "addproducts": "Add products",
         "settings": "Settings"
     },
-    "Themes": {
-        "title": "Theme",
-        "themesselect": "Themes select:",
+    "Settings": {
+        "settings": "Settings",
+        "profile": "Profile",
+        "profileedit": "Profile Edit",
+        "prefences": "Prefences"
+    },
+    "Prefences": {
+        "prefences": "Prefences",
+        "themesselect": "Theme select:",
         "system": "System",
         "light": "Light",
         "dark": "Dark",
