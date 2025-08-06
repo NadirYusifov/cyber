@@ -39,8 +39,8 @@ export default function Sidebar() {
             <AvatarFallback>a</AvatarFallback>
           </Avatar>
           <article>
-            <h3>admin</h3>
-            <Link className="flex items-center gap-x-2 text-zinc-500 hover:text-red-500 hover:underline transition-all" href={""}>LogOut<LogOut size={16} /></Link>
+            <Link href={"/admin/home/settings/profile"}>admin</Link>
+            <Link className="flex items-center gap-x-2 text-zinc-500 hover:text-zinc-500/50 hover:underline transition-all" href={""}>{t(("logout"))}<LogOut size={16} /></Link>
           </article>
         </div>
       </div>
