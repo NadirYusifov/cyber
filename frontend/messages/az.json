@@ -2,13 +2,21 @@
     "Sidebar": {
         "home": "Əsas səhifə",
         "addproducts": "Məhsullar əlavə et",
-        "settings": "Ayarlar"
+        "settings": "Ayarlar",
+        "logout": "Çıxış"
     },
     "Settings": {
         "settings": "Ayarlar",
         "profile": "Profil",
         "profileedit": "Profilini redakte et",
         "prefences": "Tərcihlər"
+    },
+    "ProfileEdit": {
+        "profileedit": "Profilini redakte et",
+        "name": "Ad",
+        "password": "Parol",
+        "save": "Yadda saxla",
+        "cancel": "Ləğv et"
     },
     "Prefences": {
         "prefences": "Tərcihlər",

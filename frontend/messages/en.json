@@ -2,13 +2,21 @@
     "Sidebar": {
         "home": "Home",
         "addproducts": "Add products",
-        "settings": "Settings"
+        "settings": "Settings",
+        "logout": "Logout"
     },
     "Settings": {
         "settings": "Settings",
         "profile": "Profile",
         "profileedit": "Profile Edit",
         "prefences": "Prefences"
+    },
+    "ProfileEdit": {
+        "profileedit": "Profile Edit",
+        "name": "Name",
+        "password": "Password",
+        "save": "Save",
+        "cancel": "Cancel"
     },
     "Prefences": {
         "prefences": "Prefences",
