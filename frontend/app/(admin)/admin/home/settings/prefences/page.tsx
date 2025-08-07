@@ -41,7 +41,7 @@ export default function Theme() {
                         <p className="text-[1.275rem]">{t("themesselect")}</p>
                     </article>
                     <div className="themes-change">
-                        <select className="themes-select w-36 outline-1" value={theme} onChange={e => setTheme(e.target.value)}>
+                        <select className="themes-select w-36 outline-none border border-zinc-500 rounded-sm px-2 py-1" value={theme} onChange={e => setTheme(e.target.value)}>
                             <option value="system">{t("system")}</option>
                             <option value="light">{t("light")}</option>
                             <option value="dark">{t("dark")}</option>
@@ -50,9 +50,9 @@ export default function Theme() {
                 </div>
                 <div className="flex items-center justify-between mt-3">
                     <article>
-                        <h3>{t("langselect")}</h3>
+                        <p className="text-[1.275rem]">{t("langselect")}</p>
                     </article>
-                    <select defaultValue={local} onChange={handleselectLang}>
+                    <select className="w-36 outline-none border border-zinc-500 rounded-sm px-2 py-1" defaultValue={local} onChange={handleselectLang}>
                         <option value="az">Azərbaycanca</option>
                         <option value="en">Engilsh</option>
                     </select>
