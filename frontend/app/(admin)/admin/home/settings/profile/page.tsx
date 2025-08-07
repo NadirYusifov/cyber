@@ -15,7 +15,7 @@ export default function Profile() {
         <article>
           <h3 className="text-[3rem] font-medium mb-10">Profile</h3>
         </article>
-        <div className="w-full h-fit items-center rounded-lg border border-zinc-700 p-10">
+        <div className="w-full h-fit rounded-lg border border-zinc-700 p-10">
           <div className="mb-10">
             <Avatar className="w-16 h-16 border border-zinc-500">
               <AvatarImage src="" alt="avatar image" />
