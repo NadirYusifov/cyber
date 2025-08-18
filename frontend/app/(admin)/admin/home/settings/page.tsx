@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
-import { getTranslations } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
 
-export default async function SettingsPage() {
-const t = await getTranslations("Settings")
+export default function SettingsPage() {
+const t = useTranslations("Settings");
 
   return (
     <section className="w-full mt-5">
