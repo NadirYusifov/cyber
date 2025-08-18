@@ -12,14 +12,14 @@ export default function ProfileEdit() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <section className="mt-5">
+    <section className="w-full mt-5">
       <div className="container mx-auto px-4">
         <article className="mb-10">
           <h3 className="text-[3rem]">
             {t("profileedit")}
           </h3>
         </article>
-        <div className="rounded-lg border border-zinc-700 p-10">
+        <div className="w-full lg:w-1/2 mx-auto rounded-lg border border-zinc-700 p-10">
           <Avatar className="w-16 h-16 border border-zinc-500">
             <AvatarImage />
             <AvatarFallback className="bg-dark-charcoal text-white text-[1.6rem]">a</AvatarFallback>
