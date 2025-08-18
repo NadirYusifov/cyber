@@ -7,16 +7,22 @@
   @apply bg-jet text-white
 }
 
+body {
+  @apply box-border transition-colors duration-500 ease-in-out
+}
+
+button {
+  @apply outline-0
+}
+
 .dark body {
+  color: white;
   background-color: var(--color-charcoal-black);
 }
 
 .light body {
+  color: black;
   background-color: var(--color-cultured);
-}
-
-body {
-  @apply box-border transition-colors duration-500 ease-in-out
 }
 
 .slick-prev:before {
