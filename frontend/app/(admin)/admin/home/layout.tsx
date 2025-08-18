@@ -1,4 +1,4 @@
-import "@/app/globals.css"
+import "@/app/globals.css";
 import Sidebar from "./sidebar/sidebar";
 import { Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
@@ -21,15 +21,15 @@ export default async function RootLayout({
   
   // onCLS(console.log)
   const locale = await getLocale();
-  const messages = await getMessages()
+  const messages = await getMessages();
 
   return (
     <html lang={locale} suppressHydrationWarning={true}>
       <body className={`${interSans.className} antialiased`} suppressHydrationWarning={true}>
         <ThemeProviders enableSystem={true} attribute="class" defaultTheme="system">
           <main className="admin-layout-main flex">
-            <Sidebar />
             <NextIntlClientProvider messages={messages}>
+            <Sidebar />
               {children}
             </NextIntlClientProvider>
           </main>
