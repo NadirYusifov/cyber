@@ -3,6 +3,7 @@
         "home": "Home",
         "addproducts": "Add products",
         "settings": "Settings",
+        "profile": "Profile",
         "logout": "Logout"
     },
     "Settings": {
