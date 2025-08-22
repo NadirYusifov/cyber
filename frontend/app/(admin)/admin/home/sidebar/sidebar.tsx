@@ -16,9 +16,7 @@ export default function Sidebar() {
   const [largesidebarmenu, setLargeSidebarMenu] = useState(true);
 
   return (
-    <>
-      {/* {largesidebarmenu } */}
-      <aside className={`flex border-r-2 border-zinc-700 h-screen transition-all duration-400 ease-in-out ${!largesidebarmenu ? "w-[5rem]" : "w-sm"}`}>
+      <aside className={`flex border-r-2 border-zinc-700 size-full h-screen transition-all duration-400 ease-in-out ${!largesidebarmenu ? "w-[5rem]" : "w-sm"}`}>
         <div className="container mx-auto px-4 mt-10">
           <div className={`pb-6 flex ${!largesidebarmenu ? "justify-center items-center" : "justify-end"}`}>
             <button className="" onClick={() => setLargeSidebarMenu(!largesidebarmenu)}>
@@ -44,8 +42,7 @@ export default function Sidebar() {
           </article>
           {
             !largesidebarmenu ? <SidebarDropMenu t={t} /> :
-              <div className="mt-[39rem] flex items-center gap-x-3">
-
+            <div className="mt-[35rem] flex items-center gap-x-3">
                 <Avatar className="bg-dark-charcoal border border-zinc-500 w-11 h-11">
                   <AvatarImage />
                   <AvatarFallback>a</AvatarFallback>
@@ -54,10 +51,9 @@ export default function Sidebar() {
                   <Link href={"/admin/home/settings/profile"}>admin</Link>
                   <Link className="flex items-center gap-x-2 text-zinc-500 hover:text-zinc-700 hover:underline transition-all" href={""}>{t(("logout"))}<LogOut size={16} /></Link>
                 </article>
-              </div>
+          </div>
           }
         </div>
       </aside>
-    </>
   )
 }
