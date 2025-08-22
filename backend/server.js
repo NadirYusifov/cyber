@@ -8,16 +8,16 @@ import { cyberproductsRoutes } from "./routes/cyberproductsRoutes.js";
 const app = express();
 dotenv.config();
 
-
-
 const PORT = 7575;
 
 app.use(express.json());
 app.use(cors({
   origin: "http://localhost:3000",
-  credentials: true
-}));
-app.use("/admin/login", cyberauthRoutes);
+  credentials: true,
+}),
+);
+
+app.use("/auth", cyberauthRoutes);
 app.use("/products", cyberproductsRoutes);
 
 const mongoconnect = async () => {
