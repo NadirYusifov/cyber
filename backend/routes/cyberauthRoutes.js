@@ -1,11 +1,16 @@
 import { Router } from "express";
-import { adminloginGet } from "../controllers/authController/adminloginGet.js";
-import { adminloginPost } from "../controllers/authController/adminloginPost.js";
+import { cyberauthlogin } from "../controllers/authController/cyberauthlogin.js";
+import { cyberauthsignup } from "../controllers/authController/cyberauthsingup.js";
+import { authmiddleware, requireadmin } from "../middleware/auth.js";
 
 export const cyberauthRoutes = Router();
 
-// GET
-cyberauthRoutes.get("/", adminloginGet);
+// POST method for Login
+cyberauthRoutes.post("/login", cyberauthlogin);
 
-// POST
-cyberauthRoutes.post("/", adminloginPost);
+// POST method for Signup
+cyberauthRoutes.post("/signup", cyberauthsignup);
+
+cyberauthRoutes.get("/private", authmiddleware, requireadmin, (req, res) => {
+  res.json("Welcome admin");
+});
