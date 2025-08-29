@@ -29,6 +29,7 @@ export const cyberauthsignup = async (req, res) => {
     res.status(201).json({
       status: 201,
       success: true,
+      message: "Success signup",
       token,
       user: { name: user.name, email: user.email, role: user.role },
     });
