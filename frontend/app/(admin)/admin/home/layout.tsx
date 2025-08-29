@@ -18,7 +18,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode,
 }>) {
-  
+
   // onCLS(console.log)
   const locale = await getLocale();
   const messages = await getMessages();
@@ -29,7 +29,7 @@ export default async function RootLayout({
         <ThemeProviders enableSystem={true} attribute="class" defaultTheme="system">
           <main className="admin-layout-main flex">
             <NextIntlClientProvider messages={messages}>
-            <Sidebar />
+              <Sidebar />
               {children}
             </NextIntlClientProvider>
           </main>
