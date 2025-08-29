@@ -26,7 +26,7 @@ export const cyberauthlogin = async (req, res) => {
     });
   }
 
-  const token = await jwt.sign(
+  const token = jwt.sign(
     { id: user._id, role: user.role },
     process.env.JWT_SECURITY_KEY,
     { expiresIn: "30d" },
