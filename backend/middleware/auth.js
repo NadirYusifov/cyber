@@ -16,7 +16,7 @@ export const authmiddleware = async (req, res, next) => {
     }
 
     const decoded = jwt.verify(token, process.env.JWT_SECURITY_KEY);
-    req.user = await cyberauthModels.findById(decoded.id).select("-password");
+    req.user = await cyberauthModels.findById(decoded.id).select("password");
     if (!req.user) {
       res.status(401).json({
         status: 401,
