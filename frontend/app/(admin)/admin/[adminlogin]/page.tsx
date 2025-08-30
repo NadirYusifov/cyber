@@ -30,17 +30,18 @@ export default function AdminLogin() {
         toast.success("Login Successfully")
         router.push("/admin/home")
       } else {
-        toast.error("LOgin Failed")
+        toast.error("Login Failed")
       }
     } catch (error) {
-      console.log(error);
+      toast.error("Server error")
+      // console.log(error);
     }
   }
 
   return (
     <section className="h-screen flex justify-center items-center">
-      <div className="container flex flex-col justify-center items-center">
-        <div className="w-1/2">
+      <div className="container px-4 mx-auto flex flex-col justify-center items-center">
+        <div className="w-full lg:w-1/2">
           <article className="pb-10 text-center">
             <h3 className="text-[2.188rem] font-medium">Admin Login</h3>
           </article>
