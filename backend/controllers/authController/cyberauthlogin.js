@@ -1,5 +1,6 @@
 import bcrypt from "bcrypt";
 import dotenv from "dotenv";
+import cookie from "cookie";
 import jwt from "jsonwebtoken";
 import { cyberauthModels } from "../../models/cyberModels.js";
 
@@ -31,6 +32,10 @@ export const cyberauthlogin = async (req, res) => {
     process.env.JWT_SECURITY_KEY,
     { expiresIn: "30d" },
   );
+
+  res.cookie("cybercookie", token, {
+    httpOnly: true,
+  });
 
   res.status(200).json({
     token,
