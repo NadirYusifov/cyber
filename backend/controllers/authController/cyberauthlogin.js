@@ -33,12 +33,21 @@ export const cyberauthlogin = async (req, res) => {
     { expiresIn: "30d" },
   );
 
+  // res.setHeader(
+  //   "Set-Cookie",
+  //   cookie.serialize("cybercookie", token, {
+  //   }),
+  // );
+
   res.cookie("cybercookie", token, {
     httpOnly: true,
+    maxAge: 60 * 60 * 24 * 7,
+    secure: true,
+    sameSite: "lax",
+    // path: "http://localhost:3000/admin/adminlogin",
   });
 
   res.status(200).json({
-    token,
     status: 200,
     success: true,
     message: "Authentication",
