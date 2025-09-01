@@ -30,7 +30,7 @@ export default function AdminLogin() {
         toast.success("Login Successfully")
         router.push("/admin/home")
       } else {
-        toast.error("Login Failed")
+        toast.error("Login in email and password incorrect")
       }
     } catch (error) {
       toast.error("Server error")
@@ -51,7 +51,7 @@ export default function AdminLogin() {
               <Input className="relative py-5" name="password" value={password} onChange={(e) => setPassword(e.target.value)} type={!showpassword ? "password" : "text"} placeholder="Password" required />
               <button type="button" onClick={() => setShowPassword(!showpassword)} className="text-[1.25rem] absolute top-0 right-5 translate-y-1/2 cursor-pointer">{!showpassword ? <CiLock /> : <CiUnlock />}</button>
             </div>
-            <Button className="text-[1.125rem] py-5">Login</Button>
+            <Button className="text-[1.125rem] my-3 py-5">Login</Button>
             <Toast />
           </form>
         </div>
