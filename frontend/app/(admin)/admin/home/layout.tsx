@@ -26,14 +26,14 @@ export default async function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning={true}>
       <body className={`${interSans.className} antialiased`} suppressHydrationWarning={true}>
-        <ThemeProviders enableSystem={true} attribute="class" defaultTheme="system">
-          <main className="admin-layout-main flex">
+        <main className="admin-layout-main flex">
+          <ThemeProviders enableSystem={true} attribute="class" defaultTheme="system">
             <NextIntlClientProvider messages={messages}>
               <Sidebar />
               {children}
             </NextIntlClientProvider>
-          </main>
-        </ThemeProviders>
+          </ThemeProviders>
+        </main>
       </body>
     </html>
   );
