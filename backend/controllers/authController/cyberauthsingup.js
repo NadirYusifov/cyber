@@ -8,7 +8,7 @@ export const cyberauthsignup = async (req, res) => {
 
   const { name, email, password } = req.body;
   try {
-    const existingUser = await cyberauthModels.findOne({ email });
+    const existingUser = await cyberauthModels.findOne({ name, email });
     if (existingUser) {
       res.status(400).json({
         status: 400,
@@ -27,10 +27,10 @@ export const cyberauthsignup = async (req, res) => {
     );
 
     res.status(201).json({
+      token,
       status: 201,
       success: true,
       message: "Success signup",
-      token,
       user: { name: user.name, email: user.email, role: user.role },
     });
   } catch (err) {
