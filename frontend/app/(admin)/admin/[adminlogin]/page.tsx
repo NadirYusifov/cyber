@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import Toast from "@/components/common/toast";
 import { Button } from "@/components/ui/button";
 import { CiLock, CiUnlock } from "react-icons/ci";
+import { Router } from "next/router";
 
 export default function AdminLogin() {
   const router = useRouter()
@@ -21,20 +22,24 @@ export default function AdminLogin() {
       const res = await fetch("http://localhost:7575/auth/login", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          "With-Credentials": "true"
+          "Content-Type": "application/json"
         },
-        body: JSON.stringify({ email, password })
+        body: JSON.stringify({ email, password }),
+        credentials: "include"
       })
       if (res.ok) {
-        toast.success("Login Successfully")
         router.push("/admin/home")
+        toast.success("Login Successfully")
       } else {
         toast.error("Login in email and password incorrect")
       }
     } catch (error) {
       toast.error("Server error")
       // console.log(error);
+    }
+    finally {
+      setEmail("");
+      setPassword("");
     }
   }
 
