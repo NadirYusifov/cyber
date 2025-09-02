@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input";
 import Toast from "@/components/common/toast";
 import { Button } from "@/components/ui/button";
 import { CiLock, CiUnlock } from "react-icons/ci";
-import { Router } from "next/router";
 
 export default function AdminLogin() {
   const router = useRouter()
