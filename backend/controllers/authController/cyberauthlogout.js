@@ -1,7 +1,9 @@
 export const cyberauthlogout = (req, res) => {
     res.clearCookie("cybercookie", {
         httpOnly: true,
-        sameSite: "lax"
+        sameSite: "lax",
+        secure: "true",
+        path: "/admin/adminlogin"
     })
     res.status(200).json({
         status: 200,
