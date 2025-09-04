@@ -1,6 +1,5 @@
 import bcrypt from "bcrypt";
 import dotenv from "dotenv";
-import cookie from "cookie";
 import jwt from "jsonwebtoken";
 import { cyberauthModels } from "../../models/cyberModels.js";
 
@@ -20,8 +19,8 @@ export const cyberauthlogin = async (req, res) => {
 
   const matchpassword = await bcrypt.compare(password, user.password);
   if (!matchpassword) {
-    res.status(400).json({
-      status: 400,
+    res.status(401).json({
+      status: 401,
       success: false,
       message: "Password is incorrect",
     });
@@ -33,21 +32,15 @@ export const cyberauthlogin = async (req, res) => {
     { expiresIn: "30d" },
   );
 
-  // res.setHeader(
-  //   "Set-Cookie",
-  //   cookie.serialize("cybercookie", token, {
-  //   }),
-  // );
-
   res.cookie("cybercookie", token, {
     httpOnly: true,
     maxAge: 60 * 60 * 24 * 7,
     secure: true,
     sameSite: "lax",
-    // path: "http://localhost:3000/admin/adminlogin",
   });
 
   res.status(200).json({
+    token,
     status: 200,
     success: true,
     message: "Authentication",
