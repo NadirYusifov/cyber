@@ -1,7 +1,7 @@
 'use client'
 
-import { useState } from "react";
 import { toast } from "sonner";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import Toast from "@/components/common/toast";
@@ -50,7 +50,7 @@ export default function AdminLogin() {
             <h3 className="text-[2.188rem] font-medium">Admin Login</h3>
           </article>
           <form className="flex flex-col justify-center space-y-4" onSubmit={handleSubmit}>
-            <Input value={email} name="username" onChange={(e) => setEmail(e.target.value)} className="py-5" type="email" placeholder="Email" required />
+            <Input value={email} name="email" onChange={(e) => setEmail(e.target.value)} className="py-5" type="email" placeholder="Email" required />
             <div className="relative">
               <Input className="relative py-5" name="password" value={password} onChange={(e) => setPassword(e.target.value)} type={!showpassword ? "password" : "text"} placeholder="Password" required />
               <button type="button" onClick={() => setShowPassword(!showpassword)} className="text-[1.25rem] absolute top-0 right-5 translate-y-1/2 cursor-pointer">{!showpassword ? <CiLock /> : <CiUnlock />}</button>
