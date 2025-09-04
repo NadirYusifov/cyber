@@ -9,6 +9,8 @@ export default function Profile() {
 
   const [showPassword, setshowPassword] = useState(false)
 
+  // const res = fetch("http://localhost:7575/auth")
+
   return (
     <section className="w-full mt-5">
       <div className="container mx-auto px-4">
