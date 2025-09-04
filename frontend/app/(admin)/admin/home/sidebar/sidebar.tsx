@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import { toast } from 'sonner';
-import Toast from '@/components/common/toast';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import Toast from '@/components/common/toast';
 import { usePathname, useRouter } from 'next/navigation';
 import SidebarDropMenu from '@/components/common/sidebardropmenu';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -62,7 +62,7 @@ export default function Sidebar() {
           </Link>
         </article>
         {
-          !largesidebarmenu ? <SidebarDropMenu t={t} /> :
+          !largesidebarmenu ? <SidebarDropMenu handlelogout={handlelogout} t={t} /> :
             <div className="mt-[30rem] flex items-center gap-x-3">
               <Avatar className="bg-dark-charcoal border border-zinc-500 w-11 h-11">
                 <AvatarImage />
@@ -70,7 +70,7 @@ export default function Sidebar() {
               </Avatar>
               <article className="flex flex-col">
                 <Link href={"/admin/home/settings/profile"}>admin</Link>
-                <Link onClick={handlelogout} className="flex items-center gap-x-2 text-zinc-500 hover:text-zinc-700 hover:underline transition-all" href={""}>{t(("logout"))}<LogOut size={16} /></Link>
+                <Link onClick={handlelogout} className="flex items-center gap-x-2 text-zinc-500 hover:text-zinc-700 hover:underline transition-all" href={{pathname: "/admin/adminlogin"}}>{t(("logout"))}<LogOut size={16} /></Link>
               </article>
             </div>
         }
