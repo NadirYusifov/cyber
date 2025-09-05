@@ -34,7 +34,7 @@ export const cyberauthlogin = async (req, res) => {
 
   res.cookie("cybercookie", token, {
     httpOnly: true,
-    maxAge: 60 * 60 * 24 * 7,
+    maxAge: 30 * 24 * 60 * 60 * 1000,
     secure: true,
     sameSite: "lax",
   });
