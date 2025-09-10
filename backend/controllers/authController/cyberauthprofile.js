@@ -10,7 +10,6 @@ dotenv.config();
         const profileget = cyberauthModels.find().then((users) => {
             if (profileget) {
                 res.status(200).json({
-                    token,
                     status: 200,
                     success: true,
                     message: "Profile get successfully",
