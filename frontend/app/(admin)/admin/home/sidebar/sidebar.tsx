@@ -10,7 +10,11 @@ import SidebarDropMenu from '@/components/common/sidebardropmenu';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { CirclePlus, House, LogOut, Settings, SquareChevronLeft, SquareChevronRight } from 'lucide-react';
 
-export default function Sidebar() {
+interface UserList {
+  user: { _id: string, email: string }[],
+}
+
+export default function Sidebar({ user }: UserList) {
   const router = useRouter();
   const pathname = usePathname();
   const t = useTranslations("Sidebar");
@@ -62,16 +66,20 @@ export default function Sidebar() {
           </Link>
         </article>
         {
-          !largesidebarmenu ? <SidebarDropMenu handlelogout={handlelogout} t={t} /> :
+          !largesidebarmenu ? <SidebarDropMenu user={user} handlelogout={handlelogout} t={t} /> :
             <div className="mt-[30rem] flex items-center gap-x-3">
               <Avatar className="bg-dark-charcoal border border-zinc-500 w-11 h-11">
                 <AvatarImage />
                 <AvatarFallback>a</AvatarFallback>
               </Avatar>
-              <article className="flex flex-col">
-                <Link href={"/admin/home/settings/profile"}>admin</Link>
-                <Link onClick={handlelogout} className="flex items-center gap-x-2 text-zinc-500 hover:text-zinc-700 hover:underline transition-all" href={{pathname: "/admin/adminlogin"}}>{t(("logout"))}<LogOut size={16} /></Link>
-              </article>
+              {user.map((u: any, _id: any) => (
+                <div key={u._id}>
+                  <article className="flex flex-col">
+                    <Link href={"/admin/home/settings/profile"}>{u.email}</Link>
+                    <Link onClick={handlelogout} className="flex items-center gap-x-2 text-zinc-500 hover:text-zinc-700 hover:underline transition-all" href={{ pathname: "/admin/adminlogin" }}>{t(("logout"))}<LogOut size={16} /></Link>
+                  </article>
+                </div>
+              ))}
             </div>
         }
       </div>
