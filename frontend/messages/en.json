@@ -6,6 +6,12 @@
         "profile": "Profile",
         "logout": "Logout"
     },
+    "Profile": {
+        "profile": "Profile",
+        "email": "Email",
+        "password": "Password",
+        "changepassword": "Change password"
+    },
     "Settings": {
         "settings": "Settings",
         "profile": "Profile",
@@ -14,7 +20,7 @@
     },
     "ProfileEdit": {
         "profileedit": "Profile Edit",
-        "name": "Name",
+        "email": "Email",
         "password": "Password",
         "save": "Save",
         "cancel": "Cancel"

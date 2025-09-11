@@ -6,6 +6,12 @@
         "profile": "Profil",
         "logout": "Çıxış"
     },
+    "Profile": {
+        "profile": "Profil",
+        "email": "Email",
+        "password": "Parol",
+        "changepassword": "Parolu dəyiş"
+    },
     "Settings": {
         "settings": "Ayarlar",
         "profile": "Profil",
@@ -14,7 +20,7 @@
     },
     "ProfileEdit": {
         "profileedit": "Profilini redakte et",
-        "name": "Ad",
+        "email": "Email",
         "password": "Parol",
         "save": "Yadda saxla",
         "cancel": "Ləğv et"
